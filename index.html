@@ -1,0 +1,18 @@
+<script src="node_modules/react/umd/react.development.js"></script>
+<script src="node_modules/react-dom/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<div id="app"></div>
+<script>
+    console.log(React)
+    console.log(ReactDOM)
+
+    function doStuff () {
+        const myButton1 = React.createElement('button', null, 'click me');
+        const date = "" + new Date();
+        const currentDateTime = React.createElement('p', null, date);
+        const elements = React.createElement('div', null, myButton1, currentDateTime);
+        ReactDOM.render(elements, document.getElementById('app'));
+    }
+    setInterval(doStuff, 1000)
+
+</script>
